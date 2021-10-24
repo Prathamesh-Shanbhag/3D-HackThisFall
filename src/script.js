@@ -2,7 +2,6 @@ import './style.css';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import * as dat from 'dat.gui';
-import { Material, TextGeometry } from 'three';
 
 /**
  * Base
@@ -20,7 +19,7 @@ const scene = new THREE.Scene();
  * Textures
  */
 const textureLoader = new THREE.TextureLoader();
-const matcapTexture = textureLoader.load('./textures/matcaps/9 .png');
+const matcapTexture = textureLoader.load('./textures/matcaps/9.png');
 
 /**
  * Font
@@ -28,7 +27,7 @@ const matcapTexture = textureLoader.load('./textures/matcaps/9 .png');
 
 const fontLoader = new THREE.FontLoader();
 fontLoader.load('fonts/helvetiker_regular.typeface.json', (font) => {
-  const textGeometry = new THREE.TextBufferGeometry('HackThisFall', {
+  const textGeometry = new THREE.TextGeometry('#HackThisFall', {
     font: font,
     size: 0.5,
     height: 0.2,
